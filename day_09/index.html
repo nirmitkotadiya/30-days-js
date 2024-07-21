@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <h1 id="heading"></h1>
+    <div class="color">Hii</div>
+    <ul></ul>
+    <img src="hii.png" alt="hii" />
+    <button>Button</button>
+    <!-- Task 1 -->
+    <script>
+      document.getElementById("heading").innerHTML = "Hello World";
+    </script>
+    <!-- Task 2 -->
+    <script>
+      document.querySelector(".color").style.backgroundColor = "red";
+    </script>
+    <!-- Task 3 -->
+    <script>
+      const newDiv = document.createElement("div");
+      newDiv.innerHTML = "Hello World";
+      document.body.appendChild(newDiv);
+    </script>
+    <!-- Task 4 -->
+    <script>
+      const newLi = document.createElement("li");
+      newLi.innerHTML = "Hello World";
+      const newLi2 = document.createElement("li");
+      newLi2.innerHTML = "Hello World 2";
+      document.querySelector("ul").appendChild(newLi);
+      document.querySelector("ul").appendChild(newLi2);
+    </script>
+    <!-- Task 5 -->
+    <script>
+      const div = document.querySelector("div");
+      div.remove();
+    </script>
+    <!-- Task 6 -->
+    <script>
+      const ul = document.querySelector("ul");
+      ul.removeChild(ul.lastElementChild);
+    </script>
+    <!-- Task 7 -->
+    <script>
+      const img = document.querySelector("img");
+      img.setAttribute("src", "hello.png");
+      img.setAttribute("alt", "hello");
+    </script>
+    <!-- Task 8 -->
+    <script>
+      const divEle = document.querySelector("div");
+      divEle.classList.add("color");
+    </script>
+    <!-- Task 9 -->
+    <script>
+      const btn = document.querySelector("button");
+      btn.addEventListener("click", () => {
+        btn.innerHTML = "Clicked";
+      });
+    </script>
+    <!-- Task 10 -->
+    <script>
+      const divele = document.querySelector("div");
+      divele.addEventListener("mouseover", () => {
+        divele.style.backgroundColor = "blue";
+      });
+      divele.addEventListener("mouseout", () => {
+        divele.style.removeProperty("background-color");
+      });
+    </script>
+  </body>
+</html>
